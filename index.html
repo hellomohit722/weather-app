@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Weather app</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your weather</p>
+            <p class="tab" data-searchWeather>Search weather</p>
+        </div>
+
+        <div class="weather-container">
+
+            <!-- Grand Location -->
+
+            <div class="grant-location-container">
+
+                <img src="assets/location.png" height="80" width="80" loading="lazy">
+
+                <p>Grant Location Access</p>
+                <p>Allow access to get wether information</p>
+                <button class="btn" data-generateAccess>Grant Access</button>
+
+            </div>
+
+            <!-- search form -->
+
+            <form class="search-form" data-searchForm>
+                <input placeholder="search for city" data-searchInput>
+
+                <button class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- loading container -->
+
+             <div class="loading-container">
+                <img src="assets/loading.gif" height="150" width="150" loading="lazy">
+                <p>Loading...</p>
+             </div>
+
+             <!-- weather info -->
+
+             <div class="user-inputContainer">
+                <!-- name & flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- description -->
+                <p data-weatherDescription></p>
+                <!-- icon -->
+                <img data-weatherIcon>
+                <!-- tempurature -->
+                <p data-temp></p>
+             </div>
+
+             <!-- 3-parameter -->
+
+             <div class="parameter-container">
+                <div class="parameter">
+                    <img src="assets/wind.png" loading="lazy">
+                    <p>Wind Speed</p>
+                    <p data-windSpeed></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="assets/humidity.png" loading="lazy">
+                    <p>Humidity</p>
+                    <p data-humidity></p>
+                </div>
+                <div class="parameter">
+                    <img src="assets/cloud.png" loading="lazy">
+                    <p>Clouds</p>
+                    <p data-Clouds></p>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+
+</html>
